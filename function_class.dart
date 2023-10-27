@@ -15,9 +15,14 @@ String greetone({
 }) {
   return 'Hello $title $name!';
 }
-void connect( String host,
+
+void connect(String host,
     {int port = 0, String user = 'chris', String password = '1234'}) {
-  print( 'Connecting to $host  on $port using $user/$password...');
+  print('Connecting to $host  on $port using $user/$password...');
+}
+
+int add(int x, int y) {
+  return x + y;
 }
 
 void main() {
@@ -25,4 +30,5 @@ void main() {
   print(greet(''));
   print(greetone(name: 'John', title: 'Mr.'));
   connect('Localhost', port: 8080, user: 'chris', password: '<PASSWORD>');
+  print(add(10, 20));
 }
