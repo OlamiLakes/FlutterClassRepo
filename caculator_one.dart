@@ -23,26 +23,26 @@ double divide(int x, int y) {
 
 void main() {
   print("Enter the first number: ");
-  var num1 = int.parse(stdin.readLineSync()!);
+  var x = int.parse(stdin.readLineSync()!);
 
   print("Enter the second number: ");
-  var num2 = int.parse(stdin.readLineSync()!);
+  var y = int.parse(stdin.readLineSync()!);
 
   print("Enter the operation (+, -, *, /): ");
   var operation = stdin.readLineSync()!;
 
   switch (operation) {
     case '+':
-      print("Result: ${add(num1, num2)}");
+      print("Result: ${add(x, y)}");
       break;
     case '-':
-      print("Result: ${subtract(num1, num2)}");
+      print("Result: ${subtract(x, y)}");
       break;
     case '*':
-      print("Result: ${multiply(num1, num2)}");
+      print("Result: ${multiply(x, y)}");
       break;
     case '/':
-      print("Result: ${divide(num1, num2)}");
+      print("Result: ${divide(x, y)}");
       break;
     default:
       print("Invalid operation.");
