@@ -19,6 +19,7 @@ class Point {
   }
 }
 
+
 void main() {
   var p1 = Point.fun(10, 10);
   var p2 = Point.origin(12, 10);
