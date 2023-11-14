@@ -2,8 +2,8 @@ void getName(String name) {
   print("Hello $name");
 }
 
-String greet(String name, [String title = '']) {
-  if (title.isEmpty) {
+String greet(String name, [String? title]) {
+  if (title!.isEmpty) {
     return 'Hello $name';
   }
   return 'Hello $title $name!';
