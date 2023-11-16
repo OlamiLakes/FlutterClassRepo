@@ -1,21 +1,17 @@
 import 'package:basic_widget/home.dart';
 import 'package:flutter/material.dart';
 
-//generator 
-void main() {
-  //method that run the app class
-  runApp(const MyApp());
-}
+//generator
+void main() => runApp(const MyApp());
 
 //root widget
 class MyApp extends StatelessWidget {
-
   //construtor
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    //contain style theme color and configuration in you app 
+    //contain style theme color and configuration in you app
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,

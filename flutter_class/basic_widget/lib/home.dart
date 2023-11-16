@@ -159,7 +159,8 @@ class BasicWidget extends StatelessWidget {
                   color: Colors.yellow,
                   height: 220.0,
                   width: 200.0,
-                )
+                ),
+                
               ],
             ),
           ],
