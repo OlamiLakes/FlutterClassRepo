@@ -1,5 +1,6 @@
-import 'package:basic_widget/home.dart';
 import 'package:flutter/material.dart';
+
+import 'text_class.dart';
 
 //generator
 void main() => runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home show your first screen
-      home: const BasicWidget(),
+      home: const TextWidget(),
     );
   }
 }
