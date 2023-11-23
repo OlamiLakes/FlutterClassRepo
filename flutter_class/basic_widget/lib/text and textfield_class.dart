@@ -57,12 +57,12 @@ class _TextWidgetState extends State<TextWidget> {
               Gap(30),
               CustomTextField(
                 hintText: 'username',
-                iconData: Icons.person_2,
+                suffixIconData: Icons.person_2,
               ),
               Gap(10),
               CustomTextField(
                 hintText: 'password',
-                iconData: Icons.lock,
+                suffixIconData: Icons.lock,
                 obscure: false,
               ),
 

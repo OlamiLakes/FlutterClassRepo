@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'flutter_form.dart';
 import 'text and textfield_class.dart';
 
 //generator
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home show your first screen
-      home: const TextWidget(),
+      home: const FlutterForms(),
     );
   }
 }
