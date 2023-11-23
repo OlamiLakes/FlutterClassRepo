@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class RandomColorWidget extends StatefulWidget {
@@ -29,7 +30,9 @@ class _RandomColorWidgetState extends State<RandomColorWidget> {
     final int randomIndex = random.nextInt(colorList.length);
     setState(() {
       randomColor = colorList[randomIndex];
-      print(randomIndex);
+      if (kDebugMode) {
+        print(randomIndex);
+      }
     });
   }
 
