@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-
 class RandomColorWidget extends StatefulWidget {
   const RandomColorWidget({super.key});
 
@@ -10,7 +9,7 @@ class RandomColorWidget extends StatefulWidget {
 }
 
 class _RandomColorWidgetState extends State<RandomColorWidget> {
-  final List<Color> colorList = [
+  final List colorList = [
     Colors.red,
     Colors.green,
     Colors.blue,
@@ -30,25 +29,35 @@ class _RandomColorWidgetState extends State<RandomColorWidget> {
     final int randomIndex = random.nextInt(colorList.length);
     setState(() {
       randomColor = colorList[randomIndex];
+      print(randomIndex);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          width: 200,
-          height: 200,
-          color: randomColor,
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                  color: randomColor,
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white)),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: generateRandomColor,
+              child: const Text('Generate Random Color'),
+            ),
+          ],
         ),
-        SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: generateRandomColor,
-          child: Text('Generate Random Color'),
-        ),
-      ],
+      ),
     );
   }
 }
