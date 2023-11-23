@@ -46,12 +46,24 @@ class _FlutterFormsState extends State<FlutterForms> {
                     obscureValue = !obscureValue;
                   });
                 },
+                validatorFuction: (value) {
+                  if (value!.isEmpty) {
+                    return 'Enter password';
+                  } else if (value.length < 8) {
+                    return 'Password is too short';
+                  }
+                  return null;
+                },
               ),
               const Gap(30),
               OutlinedButton.icon(
-                  onPressed: () {},
-                  icon: Icon(Icons.signpost_outlined),
-                  label: Text('Sign in')),
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      // Scaffold.of(context).showBottomSheet(BottomSh);
+                    }
+                  },
+                  icon: const Icon(Icons.signpost_outlined),
+                  label: const Text('Sign in')),
             ],
           ),
         ),
