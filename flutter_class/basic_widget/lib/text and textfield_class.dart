@@ -6,9 +6,21 @@ import 'package:gap/gap.dart';
 
 import 'util/custom_text.dart';
 
-class TextWidget extends StatelessWidget {
+class TextWidget extends StatefulWidget {
   const TextWidget({super.key});
 
+  @override
+  State<TextWidget> createState() => _TextWidgetState();
+}
+
+class _TextWidgetState extends State<TextWidget> {
+  String isSelected = 'seller';
+  var items = [
+    'seller',
+    'admin',
+    'buyer',
+    'Yahoo boy',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +64,44 @@ class TextWidget extends StatelessWidget {
                 hintText: 'password',
                 iconData: Icons.lock,
                 obscure: false,
+              ),
+
+              // dropdownmenu
+              DropdownButtonFormField(
+                value: isSelected,
+                alignment: AlignmentDirectional.bottomCenter,
+                isExpanded: true,
+                onChanged: (e) {
+                  setState(() {
+                    isSelected = e!;
+                  });
+                },
+                items: items
+                    .map(
+                      (e) => DropdownMenuItem(
+                        value: e,
+                        child: Text(e),
+                      ),
+                    )
+                    .toList(),
+              ),
+              DropdownButton(
+                value: isSelected,
+                alignment: AlignmentDirectional.bottomCenter,
+                isExpanded: true,
+                onChanged: (e) {
+                  setState(() {
+                    isSelected = e!;
+                  });
+                },
+                items: items
+                    .map(
+                      (e) => DropdownMenuItem(
+                        value: e,
+                        child: Text(e),
+                      ),
+                    )
+                    .toList(),
               ),
               Gap(20),
               RichText(

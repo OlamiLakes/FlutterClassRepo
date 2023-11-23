@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'text_class.dart';
+import 'text and textfield_class.dart';
 
 //generator
 void main() => runApp(const MyApp());
