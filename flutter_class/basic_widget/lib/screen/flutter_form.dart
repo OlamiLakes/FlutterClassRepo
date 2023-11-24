@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import 'util/custom_text.dart';
+import '../util/custom_text.dart';
+
 
 class FlutterForms extends StatefulWidget {
   const FlutterForms({super.key});
