@@ -6,6 +6,7 @@ class CardClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: Card(
           elevation: 10.0,
