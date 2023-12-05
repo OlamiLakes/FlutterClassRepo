@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:basic_widget/util/custom_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import 'util/custom_text.dart';
 
 class TextWidget extends StatefulWidget {
   const TextWidget({super.key});

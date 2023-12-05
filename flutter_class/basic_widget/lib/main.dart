@@ -1,10 +1,10 @@
+<<<<<<< HEAD
 import 'package:basic_widget/home.dart';
 import 'package:basic_widget/random_class.dart';
+=======
+import 'package:basic_widget/main_screen.dart';
+>>>>>>> cd45dddfb6b82e7c361c4e3b665cc0d940a2ecda
 import 'package:flutter/material.dart';
-
-import 'flutter_form.dart';
-import 'text and textfield_class.dart';
-
 //generator
 void main() => runApp(const MyApp());
 
@@ -24,7 +24,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home show your first screen
+<<<<<<< HEAD
       home: const TextWidget(),
+=======
+      home: const MainScreen(),
+>>>>>>> cd45dddfb6b82e7c361c4e3b665cc0d940a2ecda
     );
   }
 }
