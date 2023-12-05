@@ -1,3 +1,5 @@
+import 'package:basic_widget/home.dart';
+import 'package:basic_widget/random_class.dart';
 import 'package:flutter/material.dart';
 
 import 'flutter_form.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home show your first screen
-      home: const FlutterForms(),
+      home: const TextWidget(),
     );
   }
 }
